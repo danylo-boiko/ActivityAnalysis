@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0-preview.1.21102.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0-preview.1.21102.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-preview.1.21102.12" />
+      <PackageReference Include="MongoDB.Driver" Version="2.11.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ActivityAnalysis.Domain\ActivityAnalysis.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
