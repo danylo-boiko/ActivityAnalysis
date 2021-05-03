@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ActivityAnalysis.WPF.Views.NavigationBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:nav="clr-namespace:ActivityAnalysis.WPF.State.Navigators"
+             xmlns:navRadioBar="clr-namespace:ActivityAnalysis.WPF.Styles.NavRadioBar"
+             xmlns:viewModels="clr-namespace:ActivityAnalysis.WPF.ViewModels"
+             xmlns:converters="clr-namespace:ActivityAnalysis.WPF.Converters">
+    
+    <UserControl.Resources>
+        <converters:EqualValueToParameterConverter x:Key="EqualValueToParameterConverter" />
+    </UserControl.Resources>
+    
+    <Grid RenderOptions.EdgeMode="Aliased">
+        <Grid.Resources>
+            <Style BasedOn="{StaticResource NavRadioButton}" TargetType="RadioButton" />
+        </Grid.Resources>
+            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        
+        <RadioButton Grid.Row="0"
+                     Command="{Binding UpdateCurrentViewModelCommand}"
+                     CommandParameter="{x:Static nav:ViewType.TimeAnalysis}"
+                     Content="Time analysis"
+                     navRadioBar:NavRadioImage.Image="../../Resources/Icons/NavBar/home.png"
+                     IsChecked="{Binding CurrentViewModel, Mode=OneWay, Converter={StaticResource EqualValueToParameterConverter}, ConverterParameter={x:Type viewModels:TimeAnalysisViewModel}}" />
+        <RadioButton Grid.Row="1"
+                     Command="{Binding UpdateCurrentViewModelCommand}"
+                     CommandParameter="{x:Static nav:ViewType.ProgramsAnalysis}"
+                     Content="Program analysis"
+                     navRadioBar:NavRadioImage.Image="../../Resources/Icons/NavBar/programs.png"
+                     IsChecked="{Binding CurrentViewModel, Mode=OneWay, Converter={StaticResource EqualValueToParameterConverter}, ConverterParameter={x:Type viewModels:ProgramsAnalysisViewModel}}" />
+    </Grid>
+</UserControl>

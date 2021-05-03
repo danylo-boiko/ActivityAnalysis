@@ -1,0 +1,39 @@
+﻿<Application x:Class="ActivityAnalysis.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:authViews="clr-namespace:ActivityAnalysis.WPF.Views.Authentication"
+             xmlns:authViewModels="clr-namespace:ActivityAnalysis.WPF.ViewModels.Authentication"
+             xmlns:views="clr-namespace:ActivityAnalysis.WPF.Views"
+             xmlns:viewModels="clr-namespace:ActivityAnalysis.WPF.ViewModels">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="/Styles/NavRadioBar/NavRadioButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type authViewModels:SignInViewModel}">
+                <authViews:SignInView />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type authViewModels:SignUpViewModel}">
+                <authViews:SignUpView />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type authViewModels:PasswordRecoveryViewModel}">
+                <authViews:PasswordRecoveryView />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModels:TimeAnalysisViewModel}">
+                <views:TimeAnalysisView />
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModels:ProgramsAnalysisViewModel}">
+                <views:ProgramsAnalysisView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

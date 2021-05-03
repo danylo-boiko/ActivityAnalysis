@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LiveCharts.Wpf.Core" Version="0.9.8" />
+      <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0-preview.1.21102.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ActivityAnalysis.Domain\ActivityAnalysis.Domain.csproj" />
+      <ProjectReference Include="..\ActivityAnalysis.MongoDB\ActivityAnalysis.MongoDB.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\logo.png" />
+      <Resource Include="Resources\Icons\Calendars\day.png" />
+      <Resource Include="Resources\Icons\Calendars\month.png" />
+      <Resource Include="Resources\Icons\Calendars\week.png" />
+      <Resource Include="Resources\Icons\NavBar\home.png" />
+      <Resource Include="Resources\Icons\NavBar\programs.png" />
+      <Resource Include="Resources\Icons\NavBar\settings.png" />
+      <Resource Include="Resources\Icons\NavBar\usergroup.png" />
+      <Resource Include="Resources\logo.png" />
+      <None Remove="Resources\favicon.png" />
+      <Resource Include="Resources\favicon.png" />
+      <None Remove="Resources\Icons\home.png" />
+      <None Remove="Resources\Icons\programs.png" />
+      <None Remove="Resources\Icons\settings.png" />
+      <None Remove="Resources\Icons\usergroup.png" />
+      <None Remove="Resources\Icons\dayCalendar.png" />
+      <None Remove="Resources\Icons\monthCalendar.png" />
+      <None Remove="Resources\Icons\weekCalendar.png" />
+      <None Remove="Resources\Icons\defaultUserImg.png" />
+      <None Remove="Resources\Icons\arrowDown.png" />
+      <Resource Include="Resources\Icons\arrowDown.png" />
+      <None Remove="Resources\Icons\arrowUp.png" />
+      <Resource Include="Resources\Icons\arrowUp.png" />
+      <None Remove="Resources\Icons\logout.png" />
+      <None Remove="Resources\Fonts\password.ttf" />
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Remove="Resources\Icons\Header\logout.png" />
+      <Resource Include="Resources\Icons\Header\logout.png" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ActivityAnalysis.WPF.Views.HeaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <Grid Height="50" Background="#526eeb">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Column="1" FontWeight="Medium" Foreground="White" FontSize="15"  Text="{Binding Login}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Button Grid.Column="2" Width="26" Height="26" Command="{Binding LogoutCommand}" Margin="10 12 40 12" BorderThickness="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/ActivityAnalysis.WPF;component/Resources/Icons/Header/logout.png" />
+                </Button.Background>
+            </Button>
+        </Grid>
+</UserControl>

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityAnalysis.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityAnalysis.MongoDB", "ActivityAnalysis.MongoDB\ActivityAnalysis.MongoDB.csproj", "{BA293462-50D2-455B-91D3-406631053750}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityAnalysis.WPF", "ActivityAnalysis.WPF\ActivityAnalysis.WPF.csproj", "{B3C0F3B3-6C2B-41ED-8326-ADF96BB7336D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{BA293462-50D2-455B-91D3-406631053750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA293462-50D2-455B-91D3-406631053750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA293462-50D2-455B-91D3-406631053750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C0F3B3-6C2B-41ED-8326-ADF96BB7336D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C0F3B3-6C2B-41ED-8326-ADF96BB7336D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C0F3B3-6C2B-41ED-8326-ADF96BB7336D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C0F3B3-6C2B-41ED-8326-ADF96BB7336D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
